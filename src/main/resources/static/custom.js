@@ -1,6 +1,4 @@
 var map;
-var coords = {lat: 39.9612, lng: -82.9988};
-
 // customizing my image for the map pointer that shows your location.
 var image = {url: '/custom_marker.png', 
 	    scaledSize: new google.maps.Size(50, 50)};
@@ -25,7 +23,7 @@ function initMap() {
         });
         
       // information that shows on the marker/pointer when the user clicks on it.
-        var contentString = '<h2>Columbus, OH</h2> <p>Where your dreams come true.</p>';
+        var contentString = '<h2>' + city + ', ' + state + '</h2>';
 
         var infowindow = new google.maps.InfoWindow({
           content: contentString
