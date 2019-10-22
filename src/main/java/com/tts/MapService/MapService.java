@@ -2,6 +2,7 @@ package com.tts.MapService;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import lombok.Data;
 
@@ -27,33 +28,4 @@ public class MapService {
     
     
 
-}
-
-/*
- * few simple classes so that we can convert 
- * that JSON string into a Java object, 
- * a process called deserialization.
- */
-
-@Data
-public class GeocodingReponse {
-    private List<Geocoding> results;
-}
-
-@Data
-public class Geocoding {
-    private Geometry geometry;
-}
-
-@Data
-public class Geometry {
-    private Location location;
-}
-
-@Data
-public class Location {
-    private String city;
-    private String state;
-    private String lat;
-    private String lng;
 }
